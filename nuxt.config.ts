@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     'nuxt-delay-hydration',
     '@nuxtjs/web-vitals',
-    'nuxt-security',
+
   ],
   ui: {
     global: true,
@@ -40,6 +40,9 @@ export default defineNuxtConfig({
       preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini', 'c', 'cpp'],
     },
   },
+  icon: {
+    fetchTimeout: 2000, // 15 seconds
+  },
   site: {
     url: 'https://sdnteja2.sch.id/',
     name: 'SDN TEJA 2',
@@ -47,6 +50,7 @@ export default defineNuxtConfig({
     defaultLocale: 'id', // not needed if you have @nuxtjs/i18n installed
     themeColor: '#F22727',
   },
+
   scripts: {
     registry: {
       // loads the script
